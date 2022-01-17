@@ -42,4 +42,8 @@ Name=$NAME
 
 # The executable of the application, possibly with arguments.
 Exec=$LOCATION/$EXEC
+
+# The nativefier generated app name, so that Gnome will group it and "Add to Favorites" works
+StartupWMClass=`jq -r '.name' "~/.nativefier/$NAME/resources/app/package.json"`
+
 EOF
